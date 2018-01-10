@@ -1,8 +1,8 @@
 library(streamR)
 library(rjson)
 library(magrittr)
-library(ggplot2)
 install.packages("ggplot2")
+library(ggplot2)
 
 setwd("/Users/hanaanber/Dropbox/Thesis/Datasets/ZamalekMayrterHashtag/Data")
 ZamalekTweets = parseTweets("zamalekmartyr.json")
@@ -12,8 +12,6 @@ setwd("/Users/hanaanber/Dropbox/Thesis/Datasets/RihamSaed/Data")
 RihamTweets = parseTweets("RihamSaeed.json")
 setwd("/Users/hanaanber/Dropbox/Thesis/Datasets/AtaloElmasry/Data")
 elmasry = parseTweets("ataloElmasry.json")
-
-
 dated_ZamalekTweets <- as.POSIXct(ZamalekTweets$created_at, format = "%a %b %d %H:%M:%S +0000 %Y")
 dated_internet <- as.POSIXct(internet$created_at, format = "%a %b %d %H:%M:%S +0000 %Y")
 dated_RihamTweets <-  as.POSIXct(RihamTweets$created_at, format = "%a %b %d %H:%M:%S +0000 %Y")
